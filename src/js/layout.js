@@ -4,6 +4,9 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
+import { GetUsers } from "./views/GetUsers.jsx";
+import { GetTodos } from "./views/GetTodos.jsx";
+import { UserDetalle } from "./views/UserDetalle.jsx";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -24,6 +27,9 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
+						<Route path="/getusers" element={<GetUsers />} />
+						<Route path="/getusers/:userId" element={<UserDetalle />} />
+						<Route path="/getTodos" element={<GetTodos />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
